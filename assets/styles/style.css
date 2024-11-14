@@ -1,0 +1,212 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(to right, #29454A 0%, #29454A 60%, #FFFFFF 50%, #FFFFFF 100%);
+}
+
+header.navbar-container {
+    width: 100%;
+    max-width: 1200px;
+    padding-block: 1rem;
+    margin-inline: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 9999;
+}
+
+header.navbar-container .nav-list ul {
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem 1rem;
+}
+
+header.navbar-container .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .nav-list li a {
+    padding: 0.5rem 1.5rem;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 1.05rem;
+    color: white;
+    font-weight: bold;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    
+}
+
+header.navbar-container .nav-list li a:after {
+    background: none repeat scroll 0 0 transparent;
+    bottom: 0;
+    content: "";
+    display: block;
+    height: 2px;
+    left: 50%;
+    position: absolute;
+    background: #fff;
+    transition: width 0.3s ease 0s, left 0.3s ease 0s;
+    width: 0;
+}
+
+header.navbar-container .nav-list li a:hover:after {
+    width: 100%;
+    left: 0;
+}
+
+header.navbar-container .nav-list button {
+    padding: 0.2rem 2.5rem;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    font-family: 'Italiana', sans-serif;
+    font-size: 1.05rem;
+    background-color: #3b6565;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+}
+
+header.navbar-container .nav-list button:hover {
+    border: 3px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+main {
+    flex: 1;
+    width: 100%;
+    max-width: 1200px;
+    margin-inline: auto;
+    display: flex;
+    align-items: center;
+}
+
+main .content {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    padding: 3rem 4rem;
+}
+
+main .content .content-description {
+    flex: 1 1;
+}
+
+main .content .content-description .title {
+    margin-block: 1rem;
+    font-size: 6.5rem;
+    color: white;
+    font-weight: 300;
+    font-family: 'Italiana', sans-serif;
+}
+
+main .content .content-description h3 {
+    font-weight: 300;
+    font-family: 'Italiana', sans-serif;
+}
+
+main .content .content-description p,
+h3 {
+    font-size: 1.3rem;
+    line-height: 1.7rem;
+    color: white;
+}
+
+main .content .content-description p {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+main .content .content-description button {
+    padding: 0.8rem 4.5rem;
+    border: 1px solid transparent;
+    border-radius: 24px;
+    margin-block-start: 1rem;
+    font-family: 'Italiana', sans-serif;
+    font-size: 1.8rem;
+    background-color: #4C8181;
+    color: white;
+    font-weight: normal;
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+}
+
+main .content .content-description button:hover {
+    border: 1px solid white;
+    color: white;
+    background-color: transparent;
+}
+
+aside img {
+    width: 450px;
+}
+
+aside {
+    flex: 1;
+}
+
+footer {
+    padding: 0 18px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+}
+
+.modal {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.1);
+    transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
+}
+
+.modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 1rem 1.5rem;
+    width: 24rem;
+    border-radius: 0.5rem;
+}
+
+.close-button {
+    display: flex;
+    margin-left: auto;
+    width: 1.5rem;
+    line-height: 1.5rem;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    background-color: lightgray;
+}
+
+.close-button:hover {
+    background-color: darkgray;
+}
+
+.show-modal {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1.0);
+    transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
